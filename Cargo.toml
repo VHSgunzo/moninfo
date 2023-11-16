@@ -1,0 +1,21 @@
+[package]
+name = "moninfo"
+version = "0.0.1"
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/VHSgunzo/moninfo"
+description = "Show info about monitors output in Rust"
+edition = "2021"
+
+[profile.release]
+lto = true
+panic = "abort"
+opt-level = "z"
+strip = "symbols"
+codegen-units = 1
+
+[profile.dev]
+panic = "abort"
+
+[dependencies]
+glutin = "0.26.0"
