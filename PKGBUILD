@@ -1,6 +1,6 @@
 # Maintainer: VHSgunzo <vhsgunzo.github.io>
 pkgname='moninfo'
-pkgver='0.0.1'
+pkgver='0.0.2'
 pkgrel='1'
 pkgdesc="Show info about primary monitor output in Rust"
 arch=("x86_64")

@@ -19,12 +19,13 @@ fn print_help() {
 
 
 fn main() {
+    env::remove_var("WAYLAND_DISPLAY");
     let exec_args: Vec<String> = env::args().collect();
     let event_loop = EventLoop::new();
-    
+
     let primary_monitor = event_loop.primary_monitor().unwrap();
     let primary_monitor_name = primary_monitor.name().unwrap();
-    
+
     let mut mhfratio: u32 = MANGOHUD_FONT_SIZE_RATION;
     if let Ok(num) = get_env("MANGOHUD_FONT_SIZE_RATION").parse::<u32>() {
         mhfratio = num
